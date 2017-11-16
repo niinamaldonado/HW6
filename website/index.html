@@ -13,15 +13,33 @@
     <h2>Celina Maldonado HW 6</h2>
 
     <h1>Candidate List</h1>
-
-    <p> <p id = "candidateName"></p> 
-        <input type = "text" value = "0" id = "output" />            
-        <input type = "button" value = "Like" onclick = "add1()" />
-        <input type = "button" value ="Delete" onclick = "delete1()" />    
+            
+    <form id="candidateForm">
+            <input type="text" id="candidateInput">
+            <button type="button" onclick="createCandidate()">Create</button>    
+        </form>
+    </p>
     </p>
 
 
+    <div id = "messageOutput">
+            <table id = "candidateTable">
+                    <tr>
+                      <th>Name</th>
+                      <th>Likes</th>
+                      <th>Button 1</th>
+                      <th>Button 2</th>
+                    </tr>
+                    <tr>
+                      <p id = "candidateName"><td>Peter Parker</td>
+                      <td><input type = "text" value = "0" id = "output" /></td>
+                      <td><input type = "button" value = "Like" onclick = "add1()" /></td>
+                      <td><input type = "button" value ="Delete" onclick = "delete1()" /></td>
+                    </tr>
+                    </table>
+                  
 
+    </div>
 
 
 

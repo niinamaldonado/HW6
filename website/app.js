@@ -8,17 +8,13 @@ var printList = function() {
     candidateList.innerHTML = name;
 } 
 
-var a = document.getElementsByClassName('otherButton');
-
-for (var i = 0; i<a.length;i++) {
-    a[i].addEventListener('click',function(){
-        var b = this.parentNode.parentNode.cells[1].textContent;
-        var x =  parseInt(b) + 1; //add like
-        this.parentNode.parentNode.cells[1].innerHTML = x;
-    });
-
-
+function add1(r) {
+    var i = r.parentNode.parentNode.rowIndex; //row #    
+    var b = r.parentNode.parentNode.cells[1].textContent; //cell to edit
+    var x =  parseInt(b) + 1; //add like
+    r.parentNode.parentNode.cells[1].innerHTML = x;    
 }
+
 
 function deleteRow(r) {
     var i = r.parentNode.parentNode.rowIndex;

@@ -16,13 +16,18 @@
     border-style: solid;
     border-color: rgb(41, 104, 177);
     width: 50%;
-    float: inherit;
+    position: relative;
+    
 }
 
 #createForm {
     border-style: solid;
     border-color: rgb(121, 54, 117);
     width: 20%;
+    position: relative;
+    left: 595px;
+    bottom: 302px;
+    
 }
 
 table {

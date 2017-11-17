@@ -12,16 +12,19 @@
     text-align: center;
 }
 
+
 #messageOutput {
+    background: rgb(224, 222, 250);
     text-align: center;
     border-style: solid;
-    border-color: rgb(41, 104, 177);
+    border-color: rgb(171, 170, 247);
     width: 50%;
     float: left;
     
 }
 
 #createForm {
+    background: rgb(171, 209, 209);
     border-style: solid;
     border-color: rgb(121, 54, 117);
     width: 20%;
@@ -42,5 +45,4 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #ffffff;
 }

@@ -28,6 +28,12 @@ function deleteRow(r) {
 
 function createCandidate() {
 
+    if(document.getElementById('candidateInput').value == ''){
+        alert('Oops! You have to enter a name.');
+        return;
+
+    }
+
     // first count # of rows so you know where to insert it
     var x = document.getElementById("candidateTable").rows.length;
 

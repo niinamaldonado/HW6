@@ -8,15 +8,25 @@ var printList = function() {
     candidateList.innerHTML = name;
 } 
 
-var add1 = function() { //add one like per click
-    document.getElementById("output").value = parseInt(document.getElementById("output").value,10) + 1;
-  };
+var a = document.getElementsByClassName('otherButton');
 
+for (var i = 0; i<a.length;i++) {
+    a[i].addEventListener('click',function(){
+        var b = this.parentNode.parentNode.cells[1].textContent;
+        var x =  parseInt(b) + 1; //add like
+        this.parentNode.parentNode.cells[1].innerHTML = x;
+    });
+
+
+}
 
 function deleteRow(r) {
     var i = r.parentNode.parentNode.rowIndex;
     document.getElementById("candidateTable").deleteRow(i);
 }
+
+
+
 
 function createCandidate() {
 
@@ -25,13 +35,13 @@ function createCandidate() {
 
     var table = document.getElementById("candidateTable");
     var row = table.insertRow(x); //from part one
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
+    var cell1 = row.insertCell(0); //name
+    var cell2 = row.insertCell(1); //likes
+    var cell3 = row.insertCell(2); //button1
+    var cell4 = row.insertCell(3); //button2
     cell1.innerHTML = document.getElementById('candidateInput').value;
-    cell2.innerHTML = '<input type = "text" value = "0" id = "output" />';
-    cell3.innerHTML = '<input type = "button" value = "Like" onclick = "add1()" />';
+    cell2.innerHTML = '<p id ="likeNum"> 0 </p>';
+    cell3.innerHTML = '<button class="otherButton" >Like</button>';
     cell4.innerHTML = '<input type = "button" value ="Delete" onclick = "deleteRow(this)" />';
     
 

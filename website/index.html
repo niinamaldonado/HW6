@@ -15,6 +15,9 @@
     <h1>Candidate List</h1>
  
 <div id = "createForm">    
+        
+        
+
     <form id="candidateForm">
             <input type="text" id="candidateInput">
             <button type="button" onclick="createCandidate()">Create</button>    
@@ -33,8 +36,8 @@
                     </tr>
                     <tr>
                       <p id = "candidateName"><td>Peter Parker</td>
-                      <td><input type = "text" value = "0" id = "output" /></td>
-                      <td><input type = "button" value = "Like" onclick = "add1()" /></td>
+                      <td><p id ="likeNum"> 0 </p></td>
+                      <td><button class="otherButton" >Like</button></td>
                       <td><input type = "button" value ="Delete" onclick = "deleteRow(this)" /></td>
                     </tr>
                     </table>

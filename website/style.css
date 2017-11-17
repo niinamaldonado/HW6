@@ -1,3 +1,4 @@
+
 #output {
     float: left;
 }
@@ -7,19 +8,23 @@
 }
 
 #createcanditate {
-    float: left;
+    float: initial;
 }
 
 #messageOutput {
     text-align: center;
     border-style: solid;
-    border-color: blue;
-
+    border-color: rgb(41, 104, 177);
+    width: 50%;
+    float: inherit;
 }
+
+
 
 #createForm {
     border-style: solid;
-    border-color: aqua;
+    border-color: rgb(121, 54, 117);
+    width: 20%;
 }
 
 table {

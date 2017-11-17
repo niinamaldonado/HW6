@@ -8,11 +8,21 @@ var printList = function() {
     candidateList.innerHTML = name;
 } 
 
+var a = document.getElementsByClassName('otherButton');
+for (var i = 0; i<a.length;i++) {
+    a[i].addEventListener('click',function(){
+        var b = this.parentNode.parentNode.cells[1].textContent;
+        var x =  parseInt(b) + 1; //add like
+        this.parentNode.parentNode.cells[1].innerHTML = x;
+    });
+}
+
 function add1(r) {
     var i = r.parentNode.parentNode.rowIndex; //row #    
     var b = r.parentNode.parentNode.cells[1].textContent; //cell to edit
     var x =  parseInt(b) + 1; //add like
-    r.parentNode.parentNode.cells[1].innerHTML = x;    
+    r.parentNode.parentNode.cells[1].innerHTML = x;
+    
 }
 
 
@@ -37,7 +47,7 @@ function createCandidate() {
     var cell4 = row.insertCell(3); //button2
     cell1.innerHTML = document.getElementById('candidateInput').value;
     cell2.innerHTML = '<p id ="likeNum"> 0 </p>';
-    cell3.innerHTML = '<button class="otherButton" >Like</button>';
+    cell3.innerHTML = '<input type = "button" value ="Like" onclick = "add1(this)" />';
     cell4.innerHTML = '<input type = "button" value ="Delete" onclick = "deleteRow(this)" />';
     
 

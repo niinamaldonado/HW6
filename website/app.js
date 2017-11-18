@@ -9,18 +9,14 @@ var listLength = list.length; //know how long list is
 
 
 
-var listNames = list.map(a => a.name);
+var listNames = list.map(a => a.name); //array with names
 
 
 
-var listLikes = list.map(a => a.likes);
+var listLikes = list.map(a => a.likes); //array with # of likes
 
-
+//somehow read values in each array and add to correct row and cell
   
-var printList = function() {
-    candidateList.innerHTML = name;
-} 
-
 
 
 function add1(r) {

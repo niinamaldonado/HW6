@@ -4,6 +4,19 @@ var list = [ //list from homework
     { name: 'Dash', likes: '0'},
   ];
 
+
+var listLength = list.length; //know how long list is
+
+
+
+var listNames = list.map(a => a.name);
+
+
+
+var listLikes = list.map(a => a.likes);
+
+
+  
 var printList = function() {
     candidateList.innerHTML = name;
 } 
@@ -29,7 +42,7 @@ function deleteRow(r) {
 function createCandidate() {
 
     if(document.getElementById('candidateInput').value == ''){
-        alert('Oops! You have to enter a name.');
+        alert('Oops! Please enter a name');
         return;
 
     }
@@ -38,6 +51,7 @@ function createCandidate() {
     var x = document.getElementById("candidateTable").rows.length;
 
     var table = document.getElementById("candidateTable");
+    
     var row = table.insertRow(x); //from part one
     var cell1 = row.insertCell(0); //name
     var cell2 = row.insertCell(1); //likes
@@ -47,6 +61,8 @@ function createCandidate() {
     cell2.innerHTML = '<p id ="likeNum"> 0 </p>';
     cell3.innerHTML = '<input type = "button" value ="Like" onclick = "add1(this)" />';
     cell4.innerHTML = '<input type = "button" value ="Delete" onclick = "deleteRow(this)" />';
+    
+    document.getElementById("candidateInput").reset();
     
 
     
